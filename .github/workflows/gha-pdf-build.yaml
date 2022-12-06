@@ -30,11 +30,11 @@ jobs:
         run: make compile
         continue-on-error: true
 
-      - id: task_final_check_pdf_build
+      - id: task_final_check_pdf_build_success
         if: steps.task_build_pdf.outcome == 'success'
         run: echo 'PDF was compiled successfully :)'
       
-      - id: task_final_check_pdf_build
+      - id: task_final_check_pdf_build_fail
         if: steps.task_build_pdf.outcome != 'success'
         run: echo 'PDF compilation encountered an error :('
 

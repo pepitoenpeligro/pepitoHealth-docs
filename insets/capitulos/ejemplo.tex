@@ -1,0 +1,253 @@
+% \cleardoublepage
+% \clearpage{}
+
+% %[Lo que va en el índice]{Lo que va en el documento}
+
+% \chapter[Instalando GLUT]{Instalando GLUT}
+
+% Hemos decidido instalar, de las dos implementaciónes de \textbf{OpenGL} anteriormente expuestas, \textbf{freeglut}.
+% A continuación se mostrará un método de instalación de \textbf{freeglut} en las plataformas más comunes.
+
+
+% \section[Ubuntu 18.04]{Ubuntu 18.04}
+
+% 	\subsection[Instalación de freeglut]{Instalación de freeglut}
+% 		Vamos a instalar la implementación \textit{freeglut}. Para ello ejecuta la siguiente órden en una sesión de terminal \ref{fig:install}  :
+% 		\inputminted{bash}{assets/code/install.sh}
+
+% 		\begin{figure}[H]
+% 			\begin{center}
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/comandoInstall.png}
+% 				\label{fig:install}
+% 				\caption{Captura de instalación}
+
+% 				\vspace*{\floatsep}
+
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/comandoEjecucion.png}
+% 				\label{fig:launch}
+% 				\caption{Compilación y lanzamiento de una aplicación GLUT}
+% 			\end{center}
+% 		\end{figure}
+
+		
+% 		\begin{figure}[H]
+% 			\begin{center}
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/ejecucionEjemplo.png}
+% 				\label{fig:exec}
+% 				\caption{Demostración de funcionamiento}
+% 			\end{center}
+% 		\end{figure}
+
+	
+
+
+% 	\subsection[Usando freeglut con Qt]{Usando freeglut con Qt}
+% 		Si no quieres trabajar con un editor de texto y la terminal, te proponemos un entorno de desarrollo integrado para aplicaciones gráficas, estándar en la industria, \textbf{QT}.
+% 		Este software se encuentra tanto para Ubuntu como para macOS como para Windows. \newline
+% 		Descargamos la versión \textit{open source} a través de \url{https://www.qt.io/download}
+
+% 		\begin{figure}[H]
+% 			\begin{center}
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/launch-qt.png}
+% 				\label{fig:launch-qt}
+% 				\caption{Otorgamos permisos de ejecución al ejecutable descargado y lo lanzamos en una sesión de terminal}
+% 			\end{center}
+% 		\end{figure}
+
+% 		\begin{figure}[H]
+% 			\begin{center}
+
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/1.png}
+% 				\label{fig:launch-qt-1}
+% 				\caption{Pantalla de bienvenida del instalador}
+
+% 				\vspace*{\floatsep}
+
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/2.png}
+% 				\label{fig:launch-qt-2}
+% 				\caption{Necesitamos tener una cuenta de QT. Creamos una o iniciamos sesión.}
+
+% 			\end{center}
+% 		\end{figure}
+
+
+% 		\begin{figure}[H]
+% 			\begin{center}
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/3.png}
+% 				\label{fig:launch-qt-3}
+% 				\caption{Comienza la configuración de la instalación}
+
+
+% 				\vspace*{\floatsep}
+
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/4.png}
+% 				\label{fig:launch-qt-4}
+% 				\caption{Especificamos el directorio de instalación}
+
+% 			\end{center}
+% 		\end{figure}
+
+% 		\begin{figure}[H]
+% 			\begin{center}
+
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/5.png}
+% 				\label{fig:launch-qt-5}
+% 				\caption{Seleccionamos: Qt-Creator, los componentes y la plataforma x64}
+
+
+% 				\vspace*{\floatsep}
+
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/6.png}
+% 				\label{fig:launch-qt-6}
+% 				\caption{Aceptamos los términos y condiciones de uso del Software}
+
+% 			\end{center}
+% 		\end{figure}
+
+
+% 		\begin{figure}[H]
+% 			\begin{center}
+
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/7.png}
+% 				\label{fig:launch-qt-7}
+% 				\caption{Procedemos a instalar}
+
+
+% 				\vspace*{\floatsep}
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/8.png}
+% 				\label{fig:launch-qt-8}
+% 				\caption{Durante la instalación}
+% 			\end{center}
+% 		\end{figure}
+
+% 		\begin{figure}[H]
+% 			\begin{center}
+
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/9.png}
+% 				\label{fig:launch-qt-9}
+% 				\caption{Instalación finalizada}
+
+% 				\vspace*{\floatsep}
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/10.png}
+% 				\label{fig:launch-qt-10}
+% 				\caption{Ventana de inicio de QtCreator (IDE)}
+% 			\end{center}
+% 		\end{figure}
+
+		
+
+% \section[macOS]{macOS}
+% 	La \textbf{UIKit} de OS X contiene \textbf{OpenGL} y una implementación de \textbf{GLUT} propia que están disponibles para usar, luego no es necesario instalar nada.
+% 	Solo debemos tener en cuenta que a la hora de enlazar necesitamos de los frameworks \textbf{GLUT}, \textbf{OpenGL} y \textbf{Cocoa}, tal y como se muestra a continuación:\newline
+
+% 	Cabe destacar que en macOS aunque la implementación nos sea ventajosa a nuestra posición de estudiante, la implementación ,carece de características como el soporte para eventos de rueda de desplazamiento del mouse o HiDPI, aunque encontrará documentación de usuarios expertos para solucionar este inconveniente si algún día te hiciese falta.
+% 	\newline
+
+% 	A la hora de programar podemos hacer uso de un entorno integrado de desarrollo como \textbf{QT} o incluso \textbf{Xcode}. \newline
+
+% 	A continuación puedes ver una de las implementaciones de GLUT para macOS que lo solucionan:
+% 	\begin{minted}{bash}
+% brew install http://iihm.imag.fr/blanch/software/glut-macosx/contribs/glut.rb
+% 	\end{minted}
+
+% 	\inputminted{bash}{assets/code/compilar}
+
+% 	\begin{figure}[H]
+% 				\begin{center}
+
+% 					\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/mac/1.png}
+% 					\label{fig:mac-1}
+% 					\caption{Make}
+
+% 					\vspace*{\floatsep}
+% 					\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/mac/2.png}
+% 					\label{fig:mac2}
+% 					\caption{Ejecución}
+% 				\end{center}
+% 			\end{figure}
+
+
+
+% \cleardoublepage
+% \clearpage{}
+
+
+
+% \section[Windows]{Windows}
+% 	En Windows vamos a instalar primero \textbf{QT} y luego vamos a configurar freeglut.
+% 	Para ello lo primero que necesitamos es decargarlo en su versión \textit{open source} a través de \url{https://www.qt.io/download}.
+
+% 		\begin{figure}[H]
+% 			\begin{center}
+
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/windows/1.png}
+% 				\label{fig:install-qt-win-1}
+% 				\caption{Iniciando la instalación}
+
+% 				\vspace*{\floatsep}
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/windows/2.png}
+% 				\label{fig:install-qt-win-2}
+% 				\caption{Necesitamos tener una cuenta de QT. Creamos una o iniciamos sesión.}
+% 			\end{center}
+% 		\end{figure}
+
+
+% 		\begin{figure}[H]
+% 			\begin{center}
+
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/windows/3.png}
+% 				\label{fig:install-qt-win-3}
+% 				\caption{Comienza la configuración de la instalación}
+
+% 				\vspace*{\floatsep}
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/windows/4.png}
+% 				\label{fig:install-qt-win-4}
+% 				\caption{Especificamos el directorio de instalación}
+% 			\end{center}
+% 		\end{figure}
+
+
+% 		\begin{figure}[H]
+% 			\begin{center}
+
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/windows/5.png}
+% 				\label{fig:install-qt-win-5}
+% 				\caption{Seleccionamos QTCreator y MinGW}
+
+% 				\vspace*{\floatsep}
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/windows/6.png}
+% 				\label{fig:install-qt-win-6}
+% 				\caption{Aceptamos los términos y condiciones de uso del Software}
+% 			\end{center}
+% 		\end{figure}
+
+
+% 		\begin{figure}[H]
+% 			\begin{center}
+
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/windows/7.png}
+% 				\label{fig:install-qt-win-7}
+% 				\caption{Configuramos el acceso directo de QT}
+
+% 				\vspace*{\floatsep}
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/windows/8.png}
+% 				\label{fig:install-qt-win-8}
+% 				\caption{Confirmamos la instalación}
+% 			\end{center}
+% 		\end{figure}
+
+
+
+% 		\begin{figure}[H]
+% 			\begin{center}
+
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/windows/9.png}
+% 				\label{fig:install-qt-win-9}
+% 				\caption{Progreso de instalación}
+
+% 				\vspace*{\floatsep}
+% 				\includegraphics[width=10.5cm,height=10.5cm,keepaspectratio]{assets/images/windows/10.png}
+% 				\label{fig:install-qt-win-10}
+% 				\caption{Confirmación de instalación}
+% 			\end{center}
+% 		\end{figure}

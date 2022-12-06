@@ -1,0 +1,19 @@
+\chapter{Código completo de los modelos}
+\begin{minted}[linenos,tabsize=2,breaklines]{python}
+# En hadoop: /opt/spark-3.0.1/bin/pyspark --master spark://hadoop-master:7077
+# spark-submit --conf spark.jars.ivy=/tmp/.ivy /intercambio/models.py
+# exec(open('/intercambio/models.py', encoding="utf-8").read())
+
+# sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose
+# -$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+# sudo chmod +x /usr/local/bin/docker-compose
+
+
+
+import sys
+import os.path
+from time import *
+import pyspark.sql.functions as func
+
+
+\end{minted}

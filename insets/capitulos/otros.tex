@@ -1,0 +1,115 @@
+% \usepackage{graphicx}
+% \usepackage{booktabs}
+
+% Ya está metio
+\begin{table}
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{cccccccc} 
+\hline
+\textbf{ID} & \textbf{Marca} & \textbf{Modelo} & \textbf{Anchura de corte (cm)} & \textbf{Potencia (W)} & \textbf{Bolsa (l)} & \textbf{Superficie de corte (m2)} & \textbf{Precio (CZK)} \\ 
+\hline\hline
+1 & Einhell & BG – EM 1030~ & 30 & 1000~ & 28 & 250 & 1290 \\
+2 & Einhell & BG-EM 1743 HW~ & 43 & 1700~ & 52 & 700 & 2990 \\
+3 & Einhell & BG-EM 1536 HW~ & 36 & 1500~ & 40 & 600 & 2990 \\
+4 & Einhell & RG-EM 1843 HW~ & 43 & 1800~ & 63 & 800 & 429 \\
+\begin{tabular}[c]{@{}c@{}}5\\																				 \end{tabular} & AL-KO & 3.2 E~ & 32~ & 1000~ & 30~ & 250~ & 1890~ \\
+6 & \begin{tabular}[c]{@{}c@{}}Black\&Decker~ ~ ~ ~ ~\\																				\end{tabular} & \begin{tabular}[c]{@{}c@{}}																								EMAX32\\														\end{tabular} & 32 & 1200 & 35 & 200 & 2390 \\
+7 & AL-KO & \begin{tabular}[c]{@{}c@{}}																								3.8 E\\														\end{tabular} & 38 & 1300 & 43 & 500 & 2590 \\
+8 & AL-KO & Comfort 40 E~ & 40 & 1400 & 43 & 600 & 3390 \\
+9 & Gardena & PowerMax 32 E~ & 32 & 1200 & 29 & 300 & 2990 \\
+10 & BlackDecker~ ~ ~ ~ ~ & Emmax 38l~ & 38 & 1600 & 45 & 500 & 3390 \\
+11 & Gardena & PowerMax 36 E~ & 36 & 1500 & 40 & 500 & 4990 \\
+12 & Bosch & Rostak 40~ & 40 & 1700 & 50 & 750 & 6199 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+
+
+
+
+\begin{table}
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{cccccc} 
+\hline
+\textbf{Comprador} & \textbf{Ancho de corte} & \textbf{Potencia} & \textbf{Bolsa~} & \textbf{Área de corte} & \textbf{Precio} \\ 
+\hline\hline
+A & 0.20 & 0.20 & 0.20 & 0.20~ & 0.20 \\
+B & 0 & 0 & 0 & 0.25~ & 0.75 \\
+C & 0.20 & 0.10 & 0.10 & 0.20~ & 0.40
+\end{tabular}
+}
+\end{table}
+
+
+
+
+
+\begin{table}
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{cclllllllllll} 
+\hline
+\textbf{Tipo de Comprador} & \textbf{1} & \multicolumn{1}{c}{\textbf{2}} & \multicolumn{1}{c}{\textbf{3}} & \multicolumn{1}{c}{\textbf{4}} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} \\ 
+\hline\hline
+A & 0.000 & 0.000 & 0.178 & 0.000 & 0.000 & 0.000 & 0.200 & 0.114 & 0.000 & 0.200 & 0.012 & 0.000 \\
+B & 0.000 & 0.208 & 0.125 & 0.250 & 0.000 & 0.000 & 0.042 & 0.125 & 0.000 & 0.042 & 0.042 & 0.25 \\
+C & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+
+
+
+% Defuzzificacion
+
+\begin{table}
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{cccccllllllll} 
+\hline
+\textbf{Tipo de Comprador} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} \\ 
+\hline\hline
+A & 5º & 5º & 2º & 5º & 5º & 5º & 1º & 3º & 5º & 1º & 4º & 5º \\
+B & 5º & 2º & 3º & 1º & 5º & 5º & 4º & 3º & 5º & 4º & 4º & 1º \\
+C & 1º & 1º & 1º & 1º & 1º & 1º & 1º & 1º & 1º & 1º & 1º & 1º \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+
+
+
+
+
+% Tabla gorda de los valores para cada uno de los tipos de clientes y cortadora
+\begin{table}
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|c|ccc|ccc|ccc|ccc|ccc|} 
+\cline{2-16}
+\multicolumn{1}{l|}{} & \multicolumn{3}{c|}{\textbf{Anchura de Corte}} & \multicolumn{3}{c|}{\textbf{Potencia}} & \multicolumn{3}{c|}{\textbf{Capacidad Bolsa}} & \multicolumn{3}{c|}{\textbf{Superficie de Corte}} & \multicolumn{3}{c|}{\textbf{Precio}} \\
+\multicolumn{1}{c|}{} & \textit{A} & \textit{B} & \textit{C} & \textit{A} & \textit{B} & \textit{C} & \textit{A} & \textit{B} & \textit{C} & \textit{A} & \textit{B} & \textit{C} & \textit{A} & \textit{B} & \textit{C} \\ 
+\hline
+\textit{\textbf{1}} & 0.57 & 0.00 & 0.00 & 0.13 & 0.33 & 1.00 & 0.00 & 0.00 & 1.00 & 0.58 & 0.00 & 0.00 & 1.00 & 1.00 & 1.00 \\
+\textit{\textbf{2}} & 0.00 & 1.00 & 1.00 & 1.00 & 1.00 & 0.00 & 0.44 & 0.00 & 0.00 & 1.00 & 0.83 & 1.00 & 1.00 & 1.00 & 0.00 \\
+\textit{\textbf{3}} & 1.00 & 1.00 & 0.18 & 1.00 & 1.00 & 0.75 & 0.89 & 1.00 & 0.00 & 1.00 & 0.50 & 0.81 & 1.00 & 1.00 & 0.00 \\
+\textit{\textbf{4}} & 0.00 & 1.00 & 1.00 & 1.00 & 1.00 & 0.00 & 0.00 & 0.00 & 0.00 & 1.00 & 1.00 & 1.00 & 0.89 & 1.00 & 0.00 \\
+\textit{\textbf{5}} & 1.00 & 0.00 & 0.00 & 0.13 & 0.33 & 1.00 & 0.00 & 0.00 & 1.00 & 0.00 & 0.00 & 0.00 & 1.00 & 1.00 & 0.00 \\
+\textit{\textbf{6}} & 1.00 & 0.00 & 0.00 & 0.75 & 1.00 & 1.00 & 0.00 & 0.75 & 0.33 & 0.17 & 0.00 & 0.00 & 1.00 & 1.00 & 0.03 \\
+\textit{\textbf{7}} & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 0.00 & 1.00 & 0.17 & 0.42 & 1.00 & 1.00 & 0.00 \\
+\textit{\textbf{8}} & 0.57 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 0.00 & 1.00 & 0.50 & 0.81 & 1.00 & 1.00 & 0.00 \\
+\textit{\textbf{9}} & 1.00 & 0.00 & 0.00 & 0.00 & 1.00 & 1.00 & 0.00 & 0.00 & 1.00 & 1.00 & 0.00 & 0.00 & 1.00 & 1.00 & 0.00 \\
+\textit{\textbf{10}} & 1.00 & 1.00 & 1.00 & 0.64 & 1.00 & 0.33 & 1.00 & 0.75 & 0.00 & 1.00 & 0.17 & 0.42 & 1.00 & 1.00 & 0.00 \\
+\textit{\textbf{11}} & 1.00 & 1.00 & 1.00 & 0.18 & 1.00 & 0.75 & 0.89 & 1.00 & 0.00 & 1.00 & 0.17 & 0.42 & 0.06 & 1.00 & 0.00 \\
+\textit{\textbf{12}} & 0.57 & 1.00 & 1.00 & 1.00 & 1.00 & 0.00 & 0.89 & 0.00 & 0.00 & 1.00 & 1.00 & 1.00 & 0.00 & 0.83 & 0.00 \\
+\hline
+\end{tabular}
+}
+\end{table}

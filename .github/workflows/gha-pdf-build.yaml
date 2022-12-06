@@ -1,0 +1,52 @@
+name: Build PDF from LaTeX sources
+
+on:
+  push:
+    paths:
+      - ".github/workflows/gha-pdf-build.yaml"
+      - "**.tex"
+
+jobs:
+  build:
+    # Runners version: https://github.com/actions/runner-images
+    runs-on: ubuntu-22.04
+    name: Build PDF
+
+    container:
+      # https://hub.docker.com/r/danteev/texlive/tags
+      image: danteev/texlive:latest # 2022-02-15
+
+    steps:
+      - name: Download the actual repository 
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      
+      - name: Say hi before compile tex files
+        run: echo Hi! gha-pdf-build:start-compile
+
+      - name: Build PDF
+        id: task_build_pdf
+        run: make compile
+        continue-on-error: true
+
+      - id: task_final_check_pdf_build
+        if: steps.task_build_pdf.outcome == 'success'
+        run: echo 'PDF was compiled successfully :)'
+      
+      - id: task_final_check_pdf_build
+        if: steps.task_build_pdf.outcome != 'success'
+        run: echo 'PDF compilation encountered an error :('
+
+      - name: Say bye before compile tex files
+        run: echo bye! gha-pdf-build:end-compile
+
+
+
+      # https://github.com/actions/upload-artifact
+      - name: Upload the PDF output as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: mHealth
+          path: memoria.pdf
+          retention-days: 90

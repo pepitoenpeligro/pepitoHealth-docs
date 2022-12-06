@@ -1,0 +1,12 @@
+OS X:
+    brew tap caskroom/cask
+	brew cask install mactex
+	brew install python3
+	pip3 install --upgrade pip setuptools
+	pip3 install pygments
+
+Linux:
+    sudo apt install texlive-full
+	sudo apt-get install python3
+	pip3 install --upgrade pip setuptools
+	pip3 install pygments

@@ -3,7 +3,7 @@ name: Run pepitoenpeligro/custom-spellcheck on tex files
 on:
   push:
     paths:
-      - ".github/workflows/gha-tex-spelcheck.yaml"
+      - ".github/workflows/gha-tex-spellcheck.yaml"
       - "**.tex"
 
 

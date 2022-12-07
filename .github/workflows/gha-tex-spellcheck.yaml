@@ -36,6 +36,6 @@ jobs:
 
       - name: Check Spell insets/chapters
         id: task_spell_check_insets_chapters_pdf 
-        run: sh -c "for filename in insets/capitulos/*.tex; do cat $filename |  /usr/bin/aspell --home-dir=/home/aspell  --personal=${{ env.chapters_dict }} --mode=${{ env.chapters_mode }} --lang=${{ env.chapters_lang }} list; done"
+        run: for filename in insets/capitulos/*.tex; do cat $filename |  /usr/bin/aspell --home-dir=/home/aspell  --personal=${{ env.chapters_dict }} --mode=${{ env.chapters_mode }} --lang=${{ env.chapters_lang }} list; done
         # run: sh -c "for filename in $(ls insets/capitulos/*.tex); do echo ${filename}; done"
         continue-on-error: true

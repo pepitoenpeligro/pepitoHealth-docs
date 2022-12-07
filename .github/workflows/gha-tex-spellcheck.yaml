@@ -20,7 +20,7 @@ jobs:
 
     container:
       # https://hub.docker.com/repository/docker/pepitoenpeligro/custom-aspell
-      image: pepitoenpeligro/custom-aspell::main
+      image: pepitoenpeligro/custom-aspell:main
     
     steps:
       - name: Download the actual repository 

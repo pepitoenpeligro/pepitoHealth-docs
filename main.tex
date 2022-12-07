@@ -1,0 +1,65 @@
+% \documentclass[a4paper, titlepage, 12pt]{report}
+\documentclass[spanish, 11pt, a4paper]{book}
+
+\input{insets/variables}
+
+% Tipo de numeración de página
+\pagenumbering{arabic}
+
+\input{insets/paquetes}
+\input{insets/definiciones}
+
+
+\addbibresource{insets/bibliografia/db.bib}
+
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+% Inicio del documento
+
+\begin{document}
+	\selectlanguage{spanish} 
+	
+	\input{insets/portada}	
+	
+
+	\input{insets/declaracion}
+
+	\input{insets/capitulos/abstract_spanish}
+	\let\cleardoublepage\clearpage
+    \input{insets/capitulos/abstract_english}
+	
+	\input{insets/firmas}
+	\input{insets/agradecimientos}
+	
+	\tableofcontents
+	\listoffigures
+	
+    
+    
+    \selectlanguage{spanish} 
+    
+	%\foreach \c in {0,...,3}{\input{insets/capitulos/part_\c.tex} }
+	\input{insets/capitulos/part_0}
+	\input{insets/capitulos/part_1}
+	\input{insets/capitulos/part_2}
+	\input{insets/capitulos/part_3}
+	\input{insets/capitulos/part_4}
+	\input{insets/capitulos/part_5}
+	\input{insets/capitulos/part_6}
+	
+
+	
+	,
+	\appendix
+% 	\input{insets/apendices/A}
+% 	\input{insets/apendices/B}
+	
+	
+
+% 	\input{insets/bibliografia.tex}
+    \printbibliography
+
+\end{document}
+
+% Para añadir hojas vacias: \thispagestyle{empty}

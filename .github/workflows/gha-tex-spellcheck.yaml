@@ -1,0 +1,41 @@
+name: Run pepitoenpeligro/custom-spellcheck on tex files
+
+on:
+  push:
+    paths:
+      - ".github/workflows/gha-tex-spellcheck.yaml"
+      - "**.tex"
+
+
+env:
+  chapters_lang: 'es'
+  chapters_mode: 'tex'
+  chapters_dict: 'dictionary_avoided_words_es.txt'
+
+jobs:
+  spellcheck:
+    # Runners version: https://github.com/actions/runner-images
+    runs-on: ubuntu-22.04
+    name: Spellcheck 
+
+    container:
+      # https://hub.docker.com/repository/docker/pepitoenpeligro/custom-aspell
+      image: pepitoenpeligro/custom-aspell:main
+    
+    steps:
+      - name: Download the actual repository 
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      
+      - name: Say hi before check spell in tex files
+        run: echo Hi! gha-tex-spellcheck:start-compile
+
+      - name: List files of chapters
+        run: ls -la insets/capitulos
+
+      - name: Check Spell insets/chapters
+        id: task_spell_check_insets_chapters_pdf 
+        run: for filename in insets/capitulos/*.tex; do cat $filename |  /usr/bin/aspell --home-dir=/home/aspell  --personal=${{ env.chapters_dict }} --mode=${{ env.chapters_mode }} --lang=${{ env.chapters_lang }} list; done
+        # run: sh -c "for filename in $(ls insets/capitulos/*.tex); do echo ${filename}; done"
+        continue-on-error: true

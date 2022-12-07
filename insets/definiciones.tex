@@ -1,0 +1,147 @@
+% Definiciones
+\theoremstyle{plain}
+%\newtheorem{thm}{Theorem}[chapter] % reset theorem numbering for each chapter
+
+%\theoremstyle{definition}
+%\newtheorem{defn}[thm]{Definition} % definition numbers are dependent on theorem numbers
+%\newtheorem{exmp}[thm]{Example} % same for example numbers
+
+% \newcommand{\chaptercontent}{
+% \section{Basics}
+% \begin{defn}Here is a new definition.\end{defn}
+% \begin{thm}Here is a new theorem.\end{thm}
+% \begin{thm}Here is a new theorem.\end{thm}
+% \begin{exmp}Here is a good example.\end{exmp}
+% \subsection{Some tips}
+% \begin{defn}Here is a new definition.\end{defn}
+% \section{Advanced stuff}
+% \begin{defn}Here is a new definition.\end{defn}
+% \subsection{Warnings}
+% \begin{defn}Here is a new definition.\end{defn}
+% }
+
+
+\newcommand\DrawControl[3]{
+  node[#2,circle,fill=#2,inner sep=2pt,label={above:$#1$},label={[black]below:{\footnotesize#3}}] at #1 {}
+}
+\lstdefinestyle{customc}{
+   belowcaptionskip=1\baselineskip,
+   tabsize=2,
+   breaklines=true,
+  %frame=L,
+  numbers=left,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+
+\def\checkmark{\tikz\fill[scale=0.5](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+
+
+\newcommand{\xmark}{\text{\ding{55}}}
+
+\hypersetup{pageanchor=false}
+\hypersetup{pageanchor=true}
+
+\renewenvironment{leftbar}[1][\hsize]%
+{%
+        \def\FrameCommand%
+        {%
+             \includegraphics[width=1cm]{assets/images/warning.png}%           
+             \fboxsep=\FrameSep\colorbox{cyan!5}%
+        }%
+        \MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}%
+}%
+{\endMakeFramed}
+
+
+\newcommand\dir{assets/images/capitulos}
+\newcommand\nchapter{0}
+
+
+% evitamos que las páginas en blanco tengan cabeceras
+\makeatletter
+\def\clearpage{%
+  \ifvmode
+    \ifnum \@dbltopnum =\m@ne
+      \ifdim \pagetotal <\topskip
+        \hbox{}
+      \fi
+    \fi
+  \fi
+  \newpage
+  \thispagestyle{empty}
+  \write\m@ne{}
+  \vbox{}
+  \penalty -\@Mi
+}
+\makeatother
+
+
+
+
+\newcommand\abstractname{Abstract}  %%% here
+\makeatletter
+\if@titlepage
+  \newenvironment{abstract}{%
+      \titlepage
+      \null\vfil
+      \@beginparpenalty\@lowpenalty
+      \begin{center}%
+        \bfseries \abstractname
+        \@endparpenalty\@M
+      \end{center}}%
+     {\par\vfil\null\endtitlepage}
+\else
+  \newenvironment{abstract}{%
+      \if@twocolumn
+        \section*{\abstractname}%
+      \else
+        \small
+        \begin{center}%
+          {\bfseries \abstractname\vspace{-.5em}\vspace{\z@}}%
+        \end{center}%
+        \quotation
+      \fi}
+      {\if@twocolumn\else\endquotation\fi}
+\fi
+\makeatother
+
+
+
+
+
+\hypersetup{
+	pdfauthor = {\nombreAlumno\ (\email)},
+	pdftitle = {\tituloProyecto},
+	pdfsubject = {\nombreProyecto},
+	pdfkeywords = {\keywords},
+	pdfcreator = {Overleaf},
+	pdfproducer = {pdflatex}
+}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	urlcolor=cyan
+}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RE]{\rightmark}
+\fancyhead[RO,LE]{\textbf{\thepage}}
+\setlength{\headheight}{1.5\headheight}
+
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{13.6pt}
+
+% Fuent epor defecto
+\renewcommand{\familydefault}{\sfdefault}
+

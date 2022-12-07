@@ -36,5 +36,5 @@ jobs:
 
       - name: Check Spell insets/chapters
         id: task_spell_check_insets_chapters_pdf 
-        run: sh -c /usr/bin/aspell --home-dir=/home/aspell  --personal=${{ env.chapters_dict }} --mode=${{ env.chapters_mode }} --lang=${{ env.chapters_lang }} list "
+        run: sh -c /usr/bin/aspell --home-dir=/home/aspell  --personal=${{ env.chapters_dict }} --mode=${{ env.chapters_mode }} --lang=${{ env.chapters_lang }} list
         continue-on-error: true
